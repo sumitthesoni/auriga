@@ -1,0 +1,23 @@
+[project]
+name = "helpdesk-backend"
+version = "1.0.0"
+description = "Helpdesk Ticket Management System - backend"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["B008", "E731"]  # Depends(...) defaults; small clock-swap lambdas in utils/datetime.py

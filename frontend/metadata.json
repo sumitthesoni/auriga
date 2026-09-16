@@ -1,0 +1,6 @@
+{
+  "name": "Helpdesk Ticket Management",
+  "description": "Complete operations frontend for the Helpdesk Ticket Management System with SLA tracking, ticket queue, assignment controls, and metrics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
