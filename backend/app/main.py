@@ -31,6 +31,7 @@ def run_escalation_once() -> int:
         service = TicketService(TicketRepository(db), UserRepository(db), settings)
         escalated = service.escalate_overdue_tickets()
         db.commit()
+        logger.info("Automatic escalation run completed: %d ticket(s) escalated", escalated)
         return escalated
     except Exception:
         db.rollback()

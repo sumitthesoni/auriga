@@ -129,6 +129,14 @@ export function TicketQueuePage() {
     fetchTickets();
   }, [fetchTickets]);
 
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      fetchTickets(true);
+    }, 15_000);
+
+    return () => window.clearInterval(interval);
+  }, [fetchTickets]);
+
   // Listen to create ticket global event
   useEffect(() => {
     const handleCreated = () => fetchTickets(true);
